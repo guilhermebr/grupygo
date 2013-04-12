@@ -9,4 +9,5 @@ from application import app
 def index():
     template_name = "index.html"
     context = {}
-    return render_template(template_name, **context)
+    static = 'static/'
+    return render_template(template_name, context=context, STATIC_URL=static)
